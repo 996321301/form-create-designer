@@ -30,7 +30,11 @@ export default {
     },
     props(_, {t}) {
         return localeProps(t, name + '.props', [
-            makeRequiredRule(), makeOptionsRule(t, 'options'),
+            makeRequiredRule(), makeOptionsRule(t, 'options'), {
+                props: {type: "textarea"},
+                field: "customFieldFormula",
+                title: "自定义公式"
+            },
             {
                 type: 'switch',
                 field: 'type',

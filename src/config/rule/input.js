@@ -20,9 +20,13 @@ export default {
     },
     props(_, {t}) {
         return localeProps(t, name + '.props', [makeRequiredRule(), {
+            props: {type: "textarea"},
+            field: "customFieldFormula",
+            title: "自定义公式"
+        }, {
             type: 'select',
             field: 'type',
-            title: '类型',
+            title: '类型sadasdasdasdasda',
             options: [{label: 'text', value: 'text'}, {
                 label: 'textarea',
                 value: 'textarea'

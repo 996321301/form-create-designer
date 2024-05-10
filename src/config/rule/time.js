@@ -20,6 +20,10 @@ export default {
     },
     props(_, {t}) {
         return localeProps(t, name + '.props', [makeRequiredRule(), {
+            props: {type: "textarea"},
+            field: "customFieldFormula",
+            title: "自定义公式"
+        }, {
             type: 'Struct',
             field: 'pickerOptions',
             title: '当前时间日期选择器特有的选项',

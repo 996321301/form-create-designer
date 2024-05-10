@@ -25,6 +25,10 @@ export default {
     },
     props(_, {t}) {
         return localeProps(t, name + '.props', [makeRequiredRule(), {
+            props: {type: "textarea"},
+            field: "customFieldFormula",
+            title: "自定义公式"
+        }, {
             type: 'select',
             field: 'list-type',
             title: '上传类型',

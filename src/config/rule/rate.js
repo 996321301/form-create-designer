@@ -20,7 +20,11 @@ export default {
     },
     props(_, {t}) {
         return localeProps(t, name + '.props', [
-            makeRequiredRule(), {type: 'inputNumber', field: 'max', title: '最大分值', props: {min: 0}}, {
+            makeRequiredRule(), {
+                props: {type: "textarea"},
+                field: "customFieldFormula",
+                title: "自定义公式"
+            }, {type: 'inputNumber', field: 'max', title: '最大分值', props: {min: 0}}, {
                 type: 'switch',
                 field: 'disabled',
                 title: '是否为只读'
